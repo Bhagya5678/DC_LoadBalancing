@@ -20,6 +20,7 @@ app.get('/assign-server', (req, res) => {
     console.log("new client hit");
     let server = (clients % 4) + 1;
     console.log("Server assigned: ", server);
+    console.log("Server city: ", serverCities[server]);
     clients += 1;
     res.json({ server: serverCities[server] }); // Return city name instead of server number
 });
